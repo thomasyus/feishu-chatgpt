@@ -62,13 +62,15 @@
 
 📊 表格分析：轻松导入飞书表格，提升数据分析效率 🚧
 
+🍊 私有数据训练：利用公司产品信息对GPT二次训练，更好地满足客户个性化需求 🚧
+
 ## 🌟 项目特点
 
-- 🍏 基于 OpenAI-[gpt-3.5-turbo](https://platform.openai.com/account/api-keys) 接口
-- 🍎 通过 lark，将 ChatGPT 接入[飞书](https://open.feishu.cn/app)
+- 🍏 对话基于 OpenAI-[gpt-3.5-turbo](https://platform.openai.com/account/api-keys) 接口
+- 🍎 通过 lark，将 ChatGPT 接入[飞书](https://open.feishu.cn/app)和[飞书国际版](https://www.larksuite.com/)
 - 🥒
   支持[Serverless 云函数](https://github.com/serverless-devs/serverless-devs)、[本地环境](https://dashboard.cpolar.com/login)、[Docker](https://www.docker.com/)、[二进制安装包](https://github.com/Leizhenpeng/feishu-chatgpt/releases/)
-  多种渠道部署
+  等多种渠道部署
 - 🍋 基于[goCache](https://github.com/patrickmn/go-cache)内存键值对缓存
 
 ## 项目部署
@@ -319,7 +321,8 @@ docker compose down
 <br>
 
 1. 进入[release 页面](https://github.com/Leizhenpeng/feishu-chatgpt/releases/) 下载对应的安装包
-2. 解压安装包,修改 config.example.yml 中配置信息,另存为 config.yml
+2. 解压安装包,修改 config.example.yml 中配置信息,另存为 config.yaml
+3. 目录下添加文件 `role_list.yaml`，自定义角色，可以从这里获取：[链接](https://github.com/Leizhenpeng/feishu-chatgpt/blob/master/code/role_list.yaml)
 3. 运行程序入口文件 `feishu-chatgpt`
 
 事件回调地址: http://IP:9000/webhook/event
